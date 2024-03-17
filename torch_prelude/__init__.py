@@ -8,17 +8,17 @@ __all__ = [
 import torch
 
 def _init_torch_gpus():
-  gpus = []
-  ngpu = torch.cuda.device_count()
-  for idx in range(ngpu):
-    gpus.append(torch.device("cuda", idx))
-  return gpus
+    gpus = []
+    ngpu = torch.cuda.device_count()
+    for idx in range(ngpu):
+        gpus.append(torch.device("cuda", idx))
+    return gpus
 
 smp = torch.device("cpu")
 gpus = _init_torch_gpus()
 gpu = None
 if len(gpus) > 0:
-  gpu = gpus[0]
+    gpu = gpus[0]
 
 bf16 = torch.bfloat16
 f16 = torch.float16

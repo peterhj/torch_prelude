@@ -1,14 +1,14 @@
 [project]
 name = "torch_prelude"
+requires-python = ">=3.10"
 dynamic = ["version"]
-description = "torch prelude"
-#requires-python = ">=3.10"
+description = "pytorch prelude"
 authors = [
   { name = "Peter Jin" },
 ]
+keywords = []
 license = { text = "ISC OR MIT OR Apache-2.0" }
-#keywords = []
-#classifiers = []
 dependencies = [
-  "torch>=2",
+  "torch>=2.0",
 ]
+classifiers = []
